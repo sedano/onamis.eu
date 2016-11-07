@@ -68,6 +68,10 @@
             background-color: white;
         }
         
+        #logo {
+            cursor: pointer;
+        }
+        
         @media only screen and (max-width: 430px) {
             footer {
                 font-size: 75%;
@@ -83,7 +87,7 @@
 <body id="particles-js">
 
     <header>
-        <img src="img/logo.svg" alt="Onamis">
+        <img src="img/logo.svg" alt="Onamis" id="logo">
         <p>Coming soon</p>
     </header>
 
@@ -95,8 +99,39 @@
     <script src="lib/particles/particles.js"></script>
 
     <script>
-        particlesJS.load('particles-js', 'lib/particles/particlesjs-config.json', function() {
+        particlesJS.load('particles-js', 'lib/particles/particlesjs-config.json', function () {
             console.log('Particles.js loaded');
+        });
+
+        function launchIntoFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        var logo = document.getElementById("logo");
+
+        logo.addEventListener("click", function (e) {
+            var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+            if (!fullscreenElement) {
+                launchIntoFullscreen(document.documentElement);
+            } else if (fullscreenElement) {
+                exitFullscreen();
+            }
         });
     </script>
 
