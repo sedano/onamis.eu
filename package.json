@@ -23,6 +23,7 @@
     "url": "git+ssh://git@github.com/sedano/onamis.eu.git"
   },
   "author": "sedano.me",
+  "owner":"Onamis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sedano/onamis.eu/issues"
