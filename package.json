@@ -16,14 +16,15 @@
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
+    "jquery": "^1.11.3",
+    "sw-precache": "^4.2.3"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/sedano/onamis.eu.git"
   },
   "author": "sedano.me",
-  "owner":"Onamis",
+  "owner": "Onamis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sedano/onamis.eu/issues"
