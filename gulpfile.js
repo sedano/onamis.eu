@@ -77,7 +77,7 @@ gulp.task('copy', function () {
 })
 
 // Run everything
-gulp.task('default', ['sw', 'less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['sw', 'minify-sw', 'less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function () {
@@ -122,4 +122,12 @@ gulp.task('sw', function (callback) {
         ignoreUrlParametersMatching: [/./],
         stripPrefix: rootDir
     }, callback);
+});
+
+//Minify compiled service worker
+gulp.task('minify-sw', function () {
+    return gulp.src(['service-worker.js','service-worker-registration.js'])
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('.'))
 });
