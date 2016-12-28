@@ -1,5 +1,6 @@
 {
 	"name": "Onamis",
+	"short_name": "Onamis",
 	"icons": [
 		{
 			"src": "\/img\/icons\/android-chrome-192x192.png",
@@ -13,5 +14,6 @@
 		}
 	],
 	"theme_color": "#ffffff",
-	"display": "standalone"
+	"display": "standalone",
+	"gcm_sender_id": "482941778795"
 }
