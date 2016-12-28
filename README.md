@@ -1,6 +1,6 @@
 # [Onamis](https://onamis.eu/)
 
-[New Age](https://onamis.eu/) is a web app landing page theme based on Start Bootstrap and is mantained by **[Alejandro Sedano](https://sedano.me/)**.
+[Onamis.eu](https://onamis.eu/) is a web app landing page theme based on Start Bootstrap and is mantained by **[Alejandro Sedano](https://sedano.me/)**.
 
 ## Original Creator
 
