@@ -135,9 +135,44 @@
     <!-- Particles JavaScript -->
     <script src="lib/particles/particles.min.js"></script>
     <!-- Service worker -->
-    <script src="service-worker-registration.min.js" async></script>
-
+    <script src="service-worker-registration.js" async></script>
+    <!--OneSignal Notifications-->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "2d72d5ff-40cb-4ec7-b643-d49c18d6bcac",
+            allowLocalhostAsSecureOrigin: true,
+            autoRegister: false,
+            notifyButton: {
+                enable: true, /* Set to false to hide */
+                position: 'bottom-left',
+                colors: {
+                    'circle.background': '#01122D',
+                    'circle.foreground': 'white',
+                    'badge.background': '#01122D',
+                    'badge.foreground': 'white',
+                    'badge.bordercolor': 'white',
+                    'pulse.color': 'white',
+                    'dialog.button.background.hovering': 'rgb(77, 101, 113)',
+                    'dialog.button.background.active': 'rgb(70, 92, 103)',
+                    'dialog.button.background': '#01122D',
+                    'dialog.button.foreground': 'white'
+                }
+            },
+            welcomeNotification: {
+                title: "Subcription confirmed",
+                message: "Welcome to Onamis, you will now receive important updates from us"
+            },
+            persistNotification: false
+        }]);
+
+        function showNotifyButton() {
+            return
+        }
+    </script>
+
+<script>
         particlesJS.load('particles-js', 'lib/particles/particlesjs-config-xmas.json', function () {
             console.log('Particles.js loaded');
         });
@@ -172,17 +207,19 @@
                 exitFullscreen();
             }
         });
-    </script>
+</script>
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-86973144-1', 'auto');
         ga('send', 'pageview');
-    </script>
+</script>
 
 </body>
 

@@ -1,6 +1,6 @@
 /*!
  * Onamis EU -  v1.0.0 (https://github.com/sedano/onamis.eu#readme)
- * Copyright 2016 Onamis
+ * Copyright 2017 Onamis
  * Licensed under MIT
  * Developed by sedano.me
  */
