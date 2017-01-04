@@ -146,55 +146,67 @@
             autoRegister: false,
             notifyButton: {
                 enable: true, /* Set to false to hide */
-                position:'bottom-left'
+                position: 'bottom-left',
+                colors: {
+                    'circle.background': '#01122D',
+                    'circle.foreground': 'white',
+                    'badge.background': '#01122D',
+                    'badge.foreground': 'white',
+                    'badge.bordercolor': 'white',
+                    'pulse.color': 'white',
+                    'dialog.button.background.hovering': 'rgb(77, 101, 113)',
+                    'dialog.button.background.active': 'rgb(70, 92, 103)',
+                    'dialog.button.background': '#01122D',
+                    'dialog.button.foreground': 'white'
+                }
             },
-            welcomeNotification:{
-                title:"Subcription confirmed",
-                message:"Welcome to Onamis, you will now receive important updates from us"
+            welcomeNotification: {
+                title: "Subcription confirmed",
+                message: "Welcome to Onamis, you will now receive important updates from us"
             },
             persistNotification: false
         }]);
 
-        function showNotifyButton(){
+        function showNotifyButton() {
             return
         }
     </script>
 
 <script>
-    particlesJS.load('particles-js', 'lib/particles/particlesjs-config-xmas.json', function () {
-        console.log('Particles.js loaded');
-    });
+        particlesJS.load('particles-js', 'lib/particles/particlesjs-config-xmas.json', function () {
+            console.log('Particles.js loaded');
+        });
 
-    function launchIntoFullscreen(element) {
-        if (element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-        } else if (element.webkitRequestFullscreen) {
-            element.webkitRequestFullscreen();
+        function launchIntoFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            }
         }
-    }
 
-    function exitFullscreen() {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
         }
-    }
 
-    var logo = document.getElementById("footer");
+        var logo = document.getElementById("footer");
 
-    logo.addEventListener("click", function (e) {
-        var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
-        if (!fullscreenElement) {
-            launchIntoFullscreen(document.documentElement);
-        } else if (fullscreenElement) {
-            exitFullscreen();
-        }
-    });
+        logo.addEventListener("click", function (e) {
+            var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+            if (!fullscreenElement) {
+                launchIntoFullscreen(document.documentElement);
+            } else if (fullscreenElement) {
+                exitFullscreen();
+            }
+        });
 </script>
 
 <script>
