@@ -13,7 +13,7 @@ var banner = ['/*!\n',
     ' * Copyright ' + (new Date()).getFullYear(), ' <%= pkg.owner %>\n',
     ' * Licensed under <%= pkg.license%>\n',
     ' * Developed by <%= pkg.author%>\n',
-    ' */\n',
+    ' */\n\n',
     ''
 ].join('');
 
@@ -77,7 +77,7 @@ gulp.task('copy', function () {
 })
 
 // Run everything
-gulp.task('default', ['sw', 'minify-sw', 'less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['sw', 'less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function () {
@@ -121,13 +121,13 @@ gulp.task('sw', function (callback) {
         ],
         ignoreUrlParametersMatching: [/./],
         stripPrefix: rootDir
-    }, callback);
+    }, callback).then(OneSignalUpdate);
 });
 
-//Minify compiled service worker
-gulp.task('minify-sw', function () {
-    return gulp.src(['service-worker.js','service-worker-registration.js'])
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
+//Add version to OneSignalSDKWorker to trigger update
+var OneSignalUpdate = function () {
+    return gulp.src(['OneSignalSW.js'])
+        .pipe(header('// Onamis EU - v<%= pkg.version %>\n', { pkg: pkg }))
+        .pipe(rename('OneSignalSDKWorker.js'))
         .pipe(gulp.dest('.'))
-});
+};
