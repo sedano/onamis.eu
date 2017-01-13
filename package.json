@@ -1,6 +1,6 @@
 {
   "name": "onamis.eu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "onamis.eu website",
   "dependencies": {
     "particles.js": "^2.0.0",
