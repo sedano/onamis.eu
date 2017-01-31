@@ -1,6 +1,12 @@
 {
 	"name": "Onamis",
 	"short_name": "Onamis",
+	"description": "Progressive Web App Development",
+	"start_url":"/",
+	"display":"standalone",
+	"theme_color":"e0e0e0",
+	"orientation":"any",
+	"lang":"en_us",
 	"icons": [
 		{
 			"src": "\/img\/icons\/android-chrome-192x192.png",
@@ -13,7 +19,9 @@
 			"type": "image\/png"
 		}
 	],
-	"theme_color": "#ffffff",
-	"display": "standalone",
-	"gcm_sender_id": "482941778795"
+	"gcm_sender_id": "482941778795",
+	"developer":{
+		"name":"Alejandro Sedano",
+		"url":"https://sedano.me"
+	}
 }
