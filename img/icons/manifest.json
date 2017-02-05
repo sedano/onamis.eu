@@ -4,7 +4,8 @@
 	"description": "Progressive Web App Development",
 	"start_url":"/",
 	"display":"standalone",
-	"theme_color":"#E0E0E0",
+	"theme_color":"#01122D",
+	"background_color":"212121",
 	"orientation":"any",
 	"lang":"en_us",
 	"icons": [
