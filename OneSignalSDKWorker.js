@@ -1,3 +1,3 @@
-// Onamis EU - v1.2.0
+// Onamis EU - v1.4.0
 importScripts('service-worker.js');
 importScripts('https://cdn.onesignal.com/sdks/OneSignalSDK.js');
