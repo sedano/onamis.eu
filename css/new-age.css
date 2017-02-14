@@ -1,5 +1,5 @@
 /*!
- * Onamis EU -  v1.4.1 (https://github.com/sedano/onamis.eu#readme)
+ * Onamis EU -  v1.4.3 (https://github.com/sedano/onamis.eu#readme)
  * Copyright 2017 Onamis
  * Licensed under MIT
  * Developed by sedano.me
